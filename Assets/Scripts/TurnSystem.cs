@@ -15,7 +15,7 @@ public class TurnSystem : MonoBehaviour
         Instructions = new Queue<Instruction>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         ProcessInstructions();
     }

@@ -21,15 +21,22 @@ public class Instruction
 
     public void Process()
     {
-        if(performed)
+        if (TimeLeft > 0.5)
         {
-            return;
+            float rotation = ship.rigidBody.rotation % 360;
+            ship.rigidBody.rotation = Mathf.LerpAngle(ship.rigidBody.rotation, Vector2.Angle(direction, Vector2.up), Time.fixedDeltaTime * ship.turnSpeed);
         }
+        else
+        {
+            if(performed)
+            {
+                return;
+            }
 
-        performed = true;
+            performed = true;
 
-        ship.rigidBody.AddForce(direction.normalized * Speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-        DebugPlus.DrawRay(ship.transform.position, direction).duration = 2.0f;
-           
+            ship.rigidBody.AddForce(direction.normalized * Speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            DebugPlus.DrawRay(ship.transform.position, direction).duration = 2.0f;
+        }
     }
 }
