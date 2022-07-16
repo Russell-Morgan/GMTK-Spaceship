@@ -1854,7 +1854,6 @@ GameObject:
   - component: {fileID: 696379855}
   - component: {fileID: 696379854}
   - component: {fileID: 696379853}
-  - component: {fileID: 696379852}
   m_Layer: 5
   m_Name: Randomize
   m_TagString: Untagged
@@ -1883,18 +1882,6 @@ RectTransform:
   m_AnchoredPosition: {x: 394.7077, y: 155}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0, y: 0.5}
---- !u!114 &696379852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696379850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ef1575aa5dc62499e9c4a35bc60ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &696379853
 MonoBehaviour:
   m_ObjectHideFlags: 0
