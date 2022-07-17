@@ -10,6 +10,7 @@ public class KnobController : MonoBehaviour
 
     [SerializeField]
     float value;
+
     public float Value
     {
         get
@@ -30,6 +31,9 @@ public class KnobController : MonoBehaviour
             {
                 this.value = 1.0f;
             }
+
+            animator.SetFloat("Blend", this.value);
+
         }
     }
 
@@ -38,10 +42,25 @@ public class KnobController : MonoBehaviour
         if(Input.GetKey(KeyCode.F))
         {
             Value += Time.deltaTime;
-
-            animator.SetFloat("Blend", Value);
         }
     }
 
+
+    Vector3 mouseDelta = Vector3.zero;
+    public void Drag()
+    {
+        var knobPos = GetComponent<RectTransform>().position;
+        var pos = Input.mousePosition - knobPos;
+
+        var angle = Vector3.Angle(Vector2.up, pos);        
+        if(Input.mousePosition.x > knobPos.x)
+        {
+            angle = (180.0f - angle) + 180.0f;
+        }
+
+        Value = angle/360.0f;
+        
+        //mouseDelta = Input.mousePosition;
+    }
 
 }

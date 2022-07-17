@@ -10,7 +10,8 @@ public class BoxTriggerEffects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(!ManagerOfMenus)
+            ManagerOfMenus = FindObjectOfType<MenuManager>();
     }
 
     // Update is called once per frame
