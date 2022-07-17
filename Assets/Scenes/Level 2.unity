@@ -6041,6 +6041,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878782317}
     m_Modifications:
+    - target: {fileID: 3292697489546935025, guid: cdc7d511d6ead3347a3bfc9d518549fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3325854748422989574, guid: cdc7d511d6ead3347a3bfc9d518549fb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -6096,6 +6100,10 @@ PrefabInstance:
     - target: {fileID: 6100500551030908529, guid: cdc7d511d6ead3347a3bfc9d518549fb, type: 3}
       propertyPath: m_Name
       value: Win Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100500551030908529, guid: cdc7d511d6ead3347a3bfc9d518549fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6935229972589463898, guid: cdc7d511d6ead3347a3bfc9d518549fb, type: 3}
       propertyPath: m_Pivot.x

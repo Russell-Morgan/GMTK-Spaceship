@@ -37,7 +37,7 @@ public class Instruction
             ship.animator.SetTrigger("Thrust");
             ship.animator.SetFloat("ThrustSpeed", Speed/ship.baseSpeed);
             ship.rigidBody.AddForce(direction.normalized * Speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-            DebugPlus.DrawRay(ship.transform.position, direction).duration = 2.0f;
+            //DebugPlus.DrawRay(ship.transform.position, direction).duration = 2.0f;
         }
     }
 }

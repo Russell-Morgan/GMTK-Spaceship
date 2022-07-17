@@ -26,7 +26,7 @@ public class ShipSoundScript : MonoBehaviour
 
     private void Update()
     {
-        DebugPlus.LogOnScreen(rb.velocity.magnitude.ToString());
+        //DebugPlus.LogOnScreen(rb.velocity.magnitude.ToString());
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -48,7 +48,7 @@ public class ShipSoundScript : MonoBehaviour
 
         var factor = Mathf.Lerp(minPitch, maxPitch, 1-(mag/maxCrashVelocity));
 
-        DebugPlus.LogOnScreen((mag / maxCrashVelocity).ToString()).duration = 2.0f;
+        //DebugPlus.LogOnScreen((mag / maxCrashVelocity).ToString()).duration = 2.0f;
 
 
         lastPlayed = Time.time;
