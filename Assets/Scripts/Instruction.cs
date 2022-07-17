@@ -23,12 +23,11 @@ public class Instruction
     {
         if (TimeLeft > 0.5)
         {
-            float rotation = ship.rigidBody.rotation % 360;
-            ship.rigidBody.rotation = Mathf.LerpAngle(ship.rigidBody.rotation, Vector2.Angle(direction, Vector2.up), Time.fixedDeltaTime * ship.turnSpeed);
+            ship.rigidBody.rotation = Mathf.LerpAngle(ship.rigidBody.rotation, Vector2.SignedAngle(Vector2.up, direction), Time.fixedDeltaTime * ship.turnSpeed);
         }
         else
         {
-            if(performed)
+            if (performed)
             {
                 return;
             }
