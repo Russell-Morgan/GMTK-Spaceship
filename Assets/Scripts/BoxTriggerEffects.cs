@@ -17,7 +17,8 @@ public class BoxTriggerEffects : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         //  Specifies that the item entered is the ship and not just any object
-        if (col.name == "SpaceShip") { 
+        if (col.GetComponent<ShipController>())
+        { 
         switch (Effect)
         {
             case 1:
