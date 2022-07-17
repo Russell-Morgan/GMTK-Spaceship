@@ -7991,6 +7991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3321274999606966555, guid: 84d3424e263876743a3130573d0b6794, type: 3}
+      propertyPath: VolumeSlider
+      value: 
+      objectReference: {fileID: 5407036835439469667}
     - target: {fileID: 3321274999820996518, guid: 84d3424e263876743a3130573d0b6794, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -8305,6 +8309,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8762496069242265493, guid: df7b026a5e7a6474698cf87960e45c46, type: 3}
   m_PrefabInstance: {fileID: 5407036835439469665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5407036835439469667 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5407036836289878237, guid: df7b026a5e7a6474698cf87960e45c46, type: 3}
+  m_PrefabInstance: {fileID: 5407036835439469665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6168023689645256255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5876474676463070249, guid: 6f4c928104f1bbf46a1ab77313957f4d, type: 3}
