@@ -9,48 +9,11 @@ public class ShipController : MonoBehaviour
 
     [HideInInspector]
     public Rigidbody2D rigidBody;
+    public Animator animator;
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    public void FixedUpdate()
-    {
-        Movement();
-
-        Turning();
-
-    }
-
-    private void Movement()
-    {
-        //Forwards
-        if (Input.GetKey(KeyCode.Z))
-        {
-            rigidBody.AddForce(transform.up * baseSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-        }
-
-        //Backwards
-        if (Input.GetKey(KeyCode.X))
-        {
-            rigidBody.AddForce(-transform.up * baseSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-        }
-    }
-
-    private void Turning()
-    {
-        //Turning
-        var turnDirection = 0.0f;
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            turnDirection = 1.0f;
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            turnDirection = -1.0f;
-        }
-        rigidBody.AddTorque(turnDirection * turnSpeed);
-    }
 }
