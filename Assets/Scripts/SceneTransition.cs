@@ -9,16 +9,17 @@ public class SceneTransition : MonoBehaviour
 {
     public Animator Overlay;
     public string GameScene1;
-    private string GameScene2 = "Menu";
+   // private string GameScene2 = "Menu";
     public void Scene1()
     {
         StartCoroutine(WaitTheFadeOut(GameScene1));
        // SceneManager.LoadScene(GameScene1);
     }
-    public void Scene2()
+    public void ResetScene()
     {
-        StartCoroutine(WaitTheFadeOut(GameScene2));
-        //SceneManager.LoadScene(GameScene2);
+        string temp = SceneManager.GetActiveScene().name;
+
+        StartCoroutine(WaitTheFadeOut(temp));
     }
     public void ChangeScene( string SceneName)
     {
@@ -31,10 +32,13 @@ public class SceneTransition : MonoBehaviour
         //Print the time of when the function is first called.
         //   Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
+        if (Overlay != null)
         Overlay.GetComponent<Animator>().SetBool("FadeOut", true);
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(1);
 
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSecondsRealtime(1);
+
+        Time.timeScale = 1;
          SceneManager.LoadScene(SceneName);
 
         //After we have waited 5 seconds print the time again.
