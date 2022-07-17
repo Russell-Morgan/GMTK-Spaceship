@@ -17,12 +17,19 @@ public class TurnSystem : MonoBehaviour
     public Parameter[] parameters;
     public float InstructionDelay = 1.0f;
     public Button launchButton;
+    //Used to track timer
+    public TimerManager timertext;
+
 
     private void Start()
     {
         if(!ship)
         {
             ship = FindObjectOfType<ShipController>();
+        }
+        if (!timertext)
+        {
+            timertext = FindObjectOfType<TimerManager>();
         }
         Instructions = new Queue<Instruction>();
         TurnActive = true;
@@ -79,6 +86,10 @@ public class TurnSystem : MonoBehaviour
 
     void OnTurnBegin()
     {
+        // Pauses timer
+        if (timertext != null)
+            timertext.SetCounting(false);
+
         //Debug.Log("Turn Begin!");
         launchButton.interactable = true;
         Randomize();
@@ -86,6 +97,10 @@ public class TurnSystem : MonoBehaviour
 
     void OnTurnEnd()
     {
+        // Unpauses timer
+        if(timertext != null)
+        timertext.SetCounting(true);
+
         launchButton.interactable = false;
         //Debug.Log("Turn End!");
     }
@@ -94,6 +109,8 @@ public class TurnSystem : MonoBehaviour
     {
         if(Instructions.Count < 1)
         {
+            
+
             TurnActive = true;
             ship.rigidBody.simulated = false;
             return;
