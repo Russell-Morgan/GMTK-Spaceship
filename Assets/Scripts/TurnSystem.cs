@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TurnSystem : MonoBehaviour
 {
     public static TurnSystem instance;
-
+    public AudioSource source;
     private void Awake()
     {
         instance = this;
@@ -84,6 +84,7 @@ public class TurnSystem : MonoBehaviour
         }
     }
 
+
     void OnTurnBegin()
     {
         // Pauses timer
@@ -100,6 +101,10 @@ public class TurnSystem : MonoBehaviour
         // Unpauses timer
         if(timertext != null)
         timertext.SetCounting(true);
+
+
+        source.PlayOneShot(source.clip);
+
 
         launchButton.interactable = false;
         //Debug.Log("Turn End!");
