@@ -20,6 +20,10 @@ public class TurnSystem : MonoBehaviour
 
     private void Start()
     {
+        if(!ship)
+        {
+            ship = FindObjectOfType<ShipController>();
+        }
         Instructions = new Queue<Instruction>();
         TurnActive = true;
     }

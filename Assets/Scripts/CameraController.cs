@@ -15,6 +15,11 @@ public class CameraController : MonoBehaviour
     public float currentZoom = 10.0f;
     public float targetZoom = 10.0f;
 
+    private void Start()
+    {
+        cam.Follow = GameObject.FindObjectOfType<ShipController>().gameObject.transform;
+    }
+
     void Update()
     {
 
