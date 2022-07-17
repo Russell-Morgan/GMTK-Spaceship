@@ -1501,7 +1501,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 500917207}
+  m_TargetGraphic: {fileID: 1390161123}
   m_FillRect: {fileID: 1705326397}
   m_HandleRect: {fileID: 500917206}
   m_Direction: 0
@@ -2482,6 +2482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 3321274999606966555, guid: 84d3424e263876743a3130573d0b6794, type: 3}
+      propertyPath: VolumeSlider
+      value: 
+      objectReference: {fileID: 928555052}
     - target: {fileID: 3321274999820996518, guid: 84d3424e263876743a3130573d0b6794, type: 3}
       propertyPath: m_Volume
       value: 0.599
